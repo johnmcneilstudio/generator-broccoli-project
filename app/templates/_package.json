@@ -1,48 +1,42 @@
 {
-  name: "<%= opts.name %>",
-  version: "0.0.0",
-  engines: {
-    node: "0.10.x",
-    npm: "2.7.3"
+  "name": "<%= opts.slugifiedName %>",
+  "version": "0.0.0",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "2.7.3"
   },
-  description: "<%= opts.description%>",
-  repository: {
-    type: "git",
-    url: "<%= opts.herokuUrl %>"
+  "description": "<%= opts.description%>",
+  "repository": {
+    "type": "git",
+    "url": "<%= opts.herokuUrl %>"
   },
-  author: "JohnMcNeil Studio",
-  devDependencies: {
-    broccoli: "^0.16.3",
-    broccoli-autoprefixer: "^3.0.0",
-    broccoli-clean-css: "^1.0.0",
-    broccoli-cli: "^1.0.0",
-    broccoli-concat: "0.0.13",
-    broccoli-cssmyicons: "^1.2.0",
-    broccoli-env: "0.0.1",
-    broccoli-fileindex: "^1.1.0",
-    broccoli-funnel: "^0.2.3",
-    broccoli-imagemin: "^0.2.1",
-    broccoli-jshint: "^0.5.6",
-    broccoli-merge-trees: "^0.2.1",
-    broccoli-replace: "^0.3.1",
-    broccoli-sass: "^0.6.6",
-    broccoli-scss-lint: "0.0.4",
-    broccoli-string-replace: "0.0.2",
-    broccoli-svgo: "^2.0.0",
-    broccoli-uglify-js: "^0.1.3",
-    broccoli-uglify-sourcemap: "^1.0.1",
-    broccoli-zetzer: "^2.0.3"
+  "author": "JohnMcNeil Studio",
+  "devDependencies": {
+    "broccoli": "^0.16.3",
+    "broccoli-autoprefixer": "^3.0.0",
+    "broccoli-clean-css": "^1.0.0",
+    "broccoli-cli": "^1.0.0",
+    "broccoli-concat": "0.0.13",
+    "broccoli-env": "0.0.1",
+    "broccoli-funnel": "^0.2.3",
+    "broccoli-imagemin": "^0.2.1",
+    "broccoli-jshint": "^0.5.6",
+    "broccoli-merge-trees": "^0.2.1",
+    "broccoli-sass": "^0.6.6",
+    "broccoli-svgo": "^2.0.0",
+    "broccoli-uglify-sourcemap": "^1.0.1",
+    "broccoli-zetzer": "^2.0.3"
   },
-  dependencies: {
-    express: "^4.9.2",
-    fastclick: "^1.0.6",
-    http-auth: "^2.2.8",
-    underscore: "^1.7.0"
+  "dependencies": {
+    "express": "^4.9.2",
+    "fastclick": "^1.0.6",
+    "http-auth": "^2.2.8",
+    "underscore": "^1.7.0"
   },
-  scripts: {
-    start: "node ./server.js",
-    dev: "broccoli serve",
-    staging: "git push heroku :master",
-    build: "rm -rf dist && broccoli build dist"
+  "scripts": {
+    "start": "node ./server.js",
+    "dev": "broccoli serve",
+    "heroku": "git push heroku :master",
+    "build": "rm -rf dist && broccoli build dist"
   }
 }

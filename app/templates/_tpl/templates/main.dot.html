@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+  {{= it.include("head", { title: 'JMS Broccoli Project Scaffolder' }) }}
+</head>
+<body>
+  <div id="container">
+    <!-- header -->
+    {{= it.include("header") }}
+
+    <div id="content">
+      {{= it.document }}
+    </div>
+
+    {{= it.include("footer") }}
+  </div>
+  <script type="text/javascript" src="/assets/scripts/app.min.js"></script>
+</body>
+</html>

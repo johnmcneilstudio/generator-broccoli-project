@@ -1,14 +1,19 @@
 var generators = require('yeoman-generator');
 var slug = require('slug');
 var mkdirp = require('mkdirp');
+var chalk = require('chalk');
 var exec = require('child_process').exec;
+var execSync = require('child_process').execSync;
 
 module.exports = generators.Base.extend({
   initializing: {
     init: function() {
-      this.log('\n\n' +
-        'JMS '.blue + '+' + ' Broccoli '.green + '+' + ' You'.blue + ' = ' + 'GREATNESS'.white +
-        '\n\n');
+      this.log('\n' +
+        chalk.bgBlack(
+          chalk.cyan('JMS') + ' + ' + chalk.green('Broccoli') + ' + ' + chalk.cyan('YOU') + ' = ' + chalk.bold.white('GREATNESS')
+        ) +
+        '\n'
+      );
     }
   },
 
@@ -27,7 +32,7 @@ module.exports = generators.Base.extend({
       },{
         type    : 'input',
         name    : 'repository',
-        message : 'Remote URL of the git repo?',
+        message : 'URL of origin git remote? (optional)',
       },{
         type    : 'confirm',
         name    : 'useHeroku',
@@ -35,9 +40,16 @@ module.exports = generators.Base.extend({
       },{
         type    : 'input',
         name    : 'herokuUrl',
-        message : 'What\'s Heroku\'s remote URL?',
+        message : 'URL of Heroku\'s remote? (Ex. https://git.heroku.com/app-name-on-heroku.git)',
         when    : function(val) {
           return val.useHeroku;
+        }
+      },{
+        type    : 'confirm',
+        name    : 'pushToOrigin',
+        message : 'Automatically push first initial commit to origin remote ?',
+        when    : function(val) {
+          return val.repository.length > 0;
         }
       }];
 
@@ -51,6 +63,10 @@ module.exports = generators.Base.extend({
 
   configuring: {
     copyFiles: function() {
+      this.log(chalk.cyan(
+        '\nCreating config files...'
+      ));
+      
       this.copy('editorconfig', '.editorconfig');
       this.copy('gitignore', '.gitignore');
       this.copy('jshintrc', '.jshintrc');
@@ -58,7 +74,7 @@ module.exports = generators.Base.extend({
       this.template('README.md', 'README.md');
       this.template('CHANGELOG.md', 'CHANGELOG.md');
       this.copy('_package.json', 'package.json');
-      
+
       if (this.opts.useHeroku) {
         this.copy('Procfile', 'Procfile');
         this.copy('npmrc', '.npmrc');
@@ -72,23 +88,60 @@ module.exports = generators.Base.extend({
 
   install: {
     projectFiles: function() {
-      mkdirp('src/app');
-      mkdirp('src/img');
-      mkdirp('src/sass');
-      mkdirp('src/templates');
+      this.log(chalk.cyan(
+        '\nCopying app source files...'
+      ));
+      
+      mkdirp('src');
+
+      this.directory('_sass', 'src/sass');
+      this.directory('_img', 'src/img');
+      this.directory('_app', 'src/app');
+      this.directory('_tpl', 'src/tpl');
     },
 
-    exec: function() {
-      child = exec('git init');
-      child = exec('git remote add origin ' + this.opts.repository);
+    git: function() {
+      // Init git
+      this.log(chalk.cyan('\nGit initialization...'));
+      child = execSync('git init');
+
+      // Create develop branch
+      this.log(chalk.cyan('\nCreating `develop` branch...'));
+      child = execSync('git checkout -b develop');
+
+      // Add remote origin
+      if (this.opts.repository.length > 0) {
+        this.log(chalk.cyan('\nAdding git origin remote...'));
+        child = execSync('git remote add origin ' + this.opts.repository);
+      }
+
+      // Initial commit
+      child = execSync('git add --all && git commit -am "Initial Commit"');
+
+      // Push to origin
+      if (this.opts.pushToOrigin) {
+        this.log(chalk.cyan('\nPushing to origin remote...'));
+        child = execSync('git push origin develop');
+      }
+
+      // Add Heroku remote
       if (this.opts.useHeroku) {
+        this.log(chalk.cyan('\nAdded git heroku remote...'));
         child = exec('git remote add heroku ' + this.opts.herokuUrl);
       }
+    },
+
+    npm: function() {
+      this.log('\n' + chalk.cyan('Installing NPM packages...'));
+      child = execSync('npm install');
     }
   },
 
   end: function() {
-    this.log();
+    this.log(
+      '\n' + chalk.green('✔ Broccoli project set up') +
+      '\nRun ' + chalk.bold.blue('`npm run dev`') + ' to start working.'
+    );
   }
 });
 
