@@ -1,6 +1,6 @@
 # generator-broccoli-project
 
-> A [Yeoman](http://yeoman.io/) generator for Broccoli projects (following `traditional` JMS configuration)
+> A [Yeoman](http://yeoman.io/) generator for Broccoli projects (following "traditional" JMS configuration)
 
 ![Screenshot broccoli project](screenshot.png)
 
@@ -88,7 +88,7 @@ Runs the broccoli serve
 $ npm run build
 ```
 
-Builds the project to a ``dist/``` folder.
+Builds the project to a ```dist/``` folder.
 
 ### heroku
 ```shell
