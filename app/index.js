@@ -5,16 +5,37 @@ var chalk = require('chalk');
 var exec = require('child_process').exec;
 var execSync = require('child_process').execSync;
 var encrypt = require('./encrypt');
+var utils = require('./utils');
 var isUrl = require('is-url-superb');
 
 module.exports = generators.Base.extend({
   initializing: {
     init: function() {
-      this.log('\n' +
-        chalk.bgBlack(
-          chalk.cyan('JMS') + ' + ' + chalk.green('Broccoli') + ' + ' + chalk.cyan('YOU') + ' = ' + chalk.bold.white('GREATNESS')
-        ) +
-        '\n'
+      this.log(
+              chalk.green("                        ") + chalk.cyan("   _   ") + chalk.red("  __  ______  __  __ ") + "\n" +
+              chalk.green("┌┐ ┬─┐┌─┐┌─┐┌─┐┌─┐┬  ┬  ") + chalk.cyan(" _| |_ ") + chalk.red("  \\ \\/ / __ \\/ / / / ") + "\n" +
+              chalk.green("├┴┐├┬┘│ ││  │  │ ││  │  ") + chalk.cyan("|_   _|") + chalk.red("   \\  / /_/ / /_/ /  ") + "\n" +
+              chalk.green("└─┘┴└─└─┘└─┘└─┘└─┘┴─┘┴  ") + chalk.cyan("  |_|  ") + chalk.red("   /_/\\____/\\____/   ") + "\n\n\n" +
+              chalk.yellow(
+                "                         ;;;;;  \n" +
+                "                         ;;;;;  \n" +
+                "                       ..;;;;;..\n" +
+                "                        ':::::' \n" +
+                "                          ':`   \n\n"
+              ) +
+              chalk.white(
+                "                   _.-^^---....,,--      \n" +
+                "              _--                  --_  \n" +
+                "              <                        >)\n" +
+                "              |                         |\n" +
+                "               \._                   _./ \n" +
+                "                  ```--. . , ; .--'''    \n" +
+                "                        | |   |          \n" +
+                "                     .-=||  | |=-.       \n" +
+                "                     `-=#$%&%$#=-'       \n" +
+                "                        | ;  :|          \n" +
+                "               _____.,-#%&$@%#&#~,._____ \n\n"
+              )
       );
     }
   },
@@ -26,7 +47,7 @@ module.exports = generators.Base.extend({
       var prompts = [{
         type    : 'input',
         name    : 'name',
-        message : 'Project name?',
+        message : 'What\'s your project name?',
         validate: function(input) {
           return input.length > 3 || 'Project name is invalid (minimum 3 characters)';
         }
@@ -45,16 +66,22 @@ module.exports = generators.Base.extend({
         type    : 'confirm',
         name    : 'useHeroku',
         default : true,
-        message : 'Staging on heroku?'
+        message : 'Planning on deploying to Heroku?'
       },{
         type    : 'input',
         name    : 'herokuAppName',
-        message : 'Heroku app name in kebab case? (Ex. app-name-on-heroku)',
+        message : 'Heroku app name? (Ex. app-name-on-heroku)',
         when    : function(val) {
           return val.useHeroku;
         },
         validate: function(input) {
-          return input.length > 2 || 'Heroku app name is invalid (minimum 3 characters)';
+          if (input.length < 3) {
+            return 'Heroku app name is invalid (minimum 3 characters)';
+          }
+          if (!utils.isKebabCase(input)) {
+            return 'Your app name should only contain lowercase letters, numbers and dashes (kebab-case)';
+          }
+          return true;
         }
       },{
         type    : 'input',
