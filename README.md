@@ -2,6 +2,8 @@
 
 > A [Yeoman](http://yeoman.io/) generator for Broccoli projects (following `traditional` JMS configuration)
 
+[<img src="screenshot.png" width="500" height="583"/>](screenshot.png)
+
 ## Description
 
 This generator aims to create a ready-to-code environment for front-end project using Broccoli as task runner.
