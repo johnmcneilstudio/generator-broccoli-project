@@ -19,6 +19,7 @@
   "homepage": "https://bitbucket.org/johnmcneilstudio/generator-broccoli-project#readme",
   "dependencies": {
     "chalk": "^1.1.0",
+    "is-url-superb": "^2.0.0",
     "mkdirp": "^0.5.1",
     "slug": "^0.9.1",
     "yeoman-generator": "^0.20.1"

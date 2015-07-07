@@ -11,11 +11,16 @@
     "url": "<%= opts.herokuUrl %>"
   },
   "author": "JohnMcNeil Studio",
-  "devDependencies": {
+  "dependencies": {
+    "express": "^4.9.2",
+    "fastclick": "^1.0.6",
+    "http-auth": "^2.2.8",
+    "underscore": "^1.7.0",
+    "broccoli": "^0.16.3",
+    "broccoli-cli": "^1.0.0",
     "broccoli": "^0.16.3",
     "broccoli-autoprefixer": "^3.0.0",
     "broccoli-clean-css": "^1.0.0",
-    "broccoli-cli": "^1.0.0",
     "broccoli-concat": "0.0.13",
     "broccoli-env": "0.0.1",
     "broccoli-funnel": "^0.2.3",
@@ -27,16 +32,10 @@
     "broccoli-uglify-sourcemap": "^1.0.1",
     "broccoli-zetzer": "^2.0.3"
   },
-  "dependencies": {
-    "express": "^4.9.2",
-    "fastclick": "^1.0.6",
-    "http-auth": "^2.2.8",
-    "underscore": "^1.7.0"
-  },
   "scripts": {
     "start": "node ./server.js",
     "dev": "broccoli serve",
-    "heroku": "git push heroku :master",
+    "heroku": "git push heroku $(git rev-parse --abbrev-ref HEAD):master && heroku ps:scale web=1 --app <%= opts.herokuAppName %>",
     "build": "rm -rf dist && broccoli build dist"
   }
 }
