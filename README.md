@@ -2,7 +2,9 @@
 
 > A [Yeoman](http://yeoman.io/) generator for Broccoli projects (following `traditional` JMS configuration)
 
-[<img src="screenshot.png" width="500" height="583"/>](screenshot.png)
+<a href="screenshot.png">
+  <img src="screenshot.png" width="500" height="583"/>
+</a>
 
 ## Description
 
