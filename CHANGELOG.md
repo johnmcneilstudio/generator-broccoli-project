@@ -1,5 +1,9 @@
 # CHANGELOG  
 
+## 1.2.0
+- Added kebab case validation on heroku app name
+- Added descent ASCII art
+
 ## 1.1.1
 - Minor fixes in documentation
 
