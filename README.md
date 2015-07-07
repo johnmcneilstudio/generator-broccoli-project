@@ -40,59 +40,59 @@ The generator installs the following:
 
 ## INSTALLATION
 
-1. Install Yeoman  
+### Install Yeoman  
 ```shell
 $ npm install -g yo
 ```
 
-2. Install generator globally  
+### Install generator globally  
 ```shell
 $ npm install -g generator-broccoli-project
 ```
 
-3. [Create bitbucket repo](https://bitbucket.org/repo/create)
+### [Create bitbucket repo](https://bitbucket.org/repo/create)
 
-4. [Create Heroku app](https://dashboard.heroku.com/new) if needed (Heroku config setup is optional)
+### [Create Heroku app](https://dashboard.heroku.com/new) if needed (Heroku config setup is optional)
 
-5. Run generator inside your empty project folder  
+### Run generator inside your empty project folder  
 ```shell
 $ mkdir project && cd project
 $ yo broccoli-project
 ```
 
-6. Follow the step-by-step installation
+### Follow the step-by-step installation
 
-Note: some steps are optional 
-- the auto push of first commit to origin remote
-- the heroku setup config
+*Note*: some steps are optional  
+- the auto push of first commit to origin remote  
+- the heroku setup config  
 
 
 ## COMMANDS
 
 The generator automatically creates a bunch commands to simplify your dev process:
 
-### ```dev```
+### dev
 ```shell
 $ npm run dev
 ```
 
 Runs the broccoli serve
 
-### ```build```
+### build
 ```shell
 $ npm run build
 ```
 
 Builds the project to a ``dist/``` folder.
 
-### ```heroku```
+### heroku
 ```shell
 $ npm run heroku
 ```
 
 Deploys code to Heroku env
 
-### ```start```
+### start
 ```shell
 $ npm run start
 ```
