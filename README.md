@@ -7,35 +7,36 @@
 This generator aims to create a ready-to-code environment for front-end project using Broccoli as task runner.
 
 The generator installs the following:  
-- Broccoli configuration:  
-  - Fonts  
-  - Sass Compile  
-  - Autoprefixer,  
-  - CSS clean & minification  
-  - JSHint  
-  - JS concatenation  
-  - JS uglification (including sourcemaps generation)  
-  - images minification (png, jpg, gif, svg)  
-  - Zetzer templating process  
+  
+- **Broccoli configuration**   
+        * Fonts  
+        * Sass Compile  
+        * Autoprefixer  
+        * CSS clean & minification  
+        * JSHint  
+        * JS concatenation  
+        * JS uglification (including sourcemaps generation)   
+        * images minification (png, jpg, gif, svg)  
+        * Zetzer templating process  
 
-- Code / Doc configuration:  
-  - editorconfig  
-  - jshintrc  
-  - README Markdown  
-  - CHANGELOG markdown  
-  - package.json  
+- **Code / Doc configuration**  
+        * editorconfig  
+        * jshintrc  
+        * README Markdown  
+        * CHANGELOG markdown  
+        * package.json  
 
-- Git configuration:  
-  - initalizes git  
-  - creates gitignore  
-  - creates & checkouts `develop` branch  
-  - adds origin remote  
-  - pushes initial commit with skeleton  
-  - installs NPM packages  
+- **Git configuration**    
+        * initalizes git  
+        * creates gitignore  
+        * creates & checkouts `develop` branch   
+        * adds origin remote  
+        * pushes initial commit with skeleton    
+        * installs NPM packages  
 
-- Staging configuration on Heroku
-  - sets up specific file for deployment on Heroku  
-  - creates restricted access credentials (the generator asks you to enter credentials)
+- **Staging configuration on Heroku**  
+        * sets up specific file for deployment on Heroku    
+        * creates restricted access credentials (the generator asks you to enter credentials)  
 
 
 ## INSTALLATION
