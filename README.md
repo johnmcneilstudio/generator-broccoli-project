@@ -4,7 +4,9 @@
 
 ![Screenshot broccoli project](screenshot.png)
 
-## Description
+## [CHANGELOG](./CHANGELOG.md)
+
+## DESCRIPTION
 
 This generator aims to create a ready-to-code environment for front-end project using Broccoli as task runner.
 

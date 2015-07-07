@@ -2,6 +2,13 @@
 
 > <%= opts.description %>
 
+<% if (opts.useHeroku) { %>
+## Server access  
+[https://<%= opts.herokuAppName %>.herokuapp.com](https://<%= opts.herokuAppName %>.herokuapp.com)  
+**Credentials**  
+<%= opts.restrictedAccess.username %> / <%= opts.restrictedAccess.passwordClear %>
+<% } %>
+
 ## [CHANGELOG](./CHANGELOG.md)
 
 ## INSTALL

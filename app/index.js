@@ -94,7 +94,8 @@ module.exports = generators.Base.extend({
           this.opts.herokuUrl = 'https://git.heroku.com/' + this.opts.herokuAppName + '.git';
           this.opts.restrictedAccess = {
             username: answers.restrictedAccessUsername,
-            password: '{SHA}' + encrypt.sha1(this.opts.restrictedAccessPassword)
+            password: '{SHA}' + encrypt.sha1(this.opts.restrictedAccessPassword),
+            passwordClear: this.opts.restrictedAccessPassword
           };
         }
         done();
