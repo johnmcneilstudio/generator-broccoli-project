@@ -43,10 +43,11 @@ var cssTree = cleanCSS(autoprefixCSS, {
 /**************************************************
  * JAVASCRIPT
  **************************************************/
-var hintJS = jshint(src + '/' + app, {
+var app = funnel(src+'/'+app);
+var hintJS = jshint(app, {
   disableTestGenerator: true
 });
-var concatJS = concat(hintJS, {
+var concatJS = concat(app, {
   inputFiles: ['**/*.js'],
   outputFile: '/scripts/app.min.js'
 });
