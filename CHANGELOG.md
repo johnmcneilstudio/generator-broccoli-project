@@ -1,8 +1,14 @@
 # CHANGELOG  
 
+## 1.2.2
+- Added cmd to open heroku link once pushed
+
+## 1.2.1
+- Fixed issue on JSHint in Brocfile that wasn't compiling the JS
+
 ## 1.2.0
 - Added kebab case validation on heroku app name
-- Added descent ASCII art
+- Added decent ASCII art
 
 ## 1.1.1
 - Minor fixes in documentation
