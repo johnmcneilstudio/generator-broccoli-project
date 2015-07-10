@@ -35,7 +35,7 @@
   "scripts": {
     "start": "node ./server.js",
     "dev": "broccoli serve",
-    "heroku": "git push heroku $(git rev-parse --abbrev-ref HEAD):master && heroku ps:scale web=1 --app <%= opts.herokuAppName %>",
+    "heroku": "git push heroku $(git rev-parse --abbrev-ref HEAD):master && heroku ps:scale web=1 --app <%= opts.herokuAppName %> && open https://<%= opts.herokuAppName %>.herokuapp.com",
     "build": "rm -rf dist && broccoli build dist"
   }
 }
