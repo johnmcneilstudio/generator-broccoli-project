@@ -1,6 +1,6 @@
 # generator-broccoli-project
 
-> A [Yeoman](http://yeoman.io/) generator for Broccoli projects (following "traditional" JMS configuration)
+> A [Yeoman](http://yeoman.io/) generator for Broccoli projects (includes Git & Heroku)
 
 ![Screenshot broccoli project](screenshot.png)
 
