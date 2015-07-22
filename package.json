@@ -14,7 +14,10 @@
     "type": "git",
     "url": "git+https://bitbucket.org/johnmcneilstudio/generator-broccoli-project.git"
   },
-  "author": "",
+  "author": {
+    "name": "Matthieu Collé",
+    "url": "https://github.com/raiseandfall"
+  },
   "license": "ISC",
   "homepage": "https://bitbucket.org/johnmcneilstudio/generator-broccoli-project#readme",
   "dependencies": {
