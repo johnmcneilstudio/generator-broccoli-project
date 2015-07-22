@@ -1,6 +1,6 @@
 {
   "name": "generator-broccoli-project",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A Yeoman generator for our broccoli projects",
   "main": "index.js",
   "scripts": {
