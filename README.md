@@ -55,7 +55,7 @@ $ npm install -g yo
 $ npm install -g generator-broccoli-project
 ```
 
-### 3. [Create bitbucket repo](https://bitbucket.org/repo/create)
+### 3. Create Git repo
 
 ### 4. [Create Heroku app](https://dashboard.heroku.com/new) if needed (Heroku config setup is optional)
 

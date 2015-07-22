@@ -1,5 +1,9 @@
 # CHANGELOG  
 
+## 1.2.5
+- Updated doc 
+- Cleaned files
+
 ## 1.2.2
 - Added cmd to open heroku link once pushed
 
