@@ -23,6 +23,16 @@
   "bugs": {
     "url": "https://github.com/johnmcneilstudio/generator-broccoli-project/issues"
   },
+  "keywords": [
+    "yeoman-generator",
+    "broccoli",
+    "generator",
+    "project",
+    "starter",
+    "scaffolding",
+    "heroku",
+    "markdown"
+  ],
   "dependencies": {
     "chalk": "^1.1.0",
     "is-url-superb": "^2.0.0",
