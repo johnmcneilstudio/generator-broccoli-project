@@ -1,6 +1,6 @@
 {
   "name": "generator-broccoli-project",
-  "version": "1.2.3",
+  "version": "1.2.6",
   "description": "A Yeoman generator for our broccoli projects",
   "main": "index.js",
   "scripts": {
@@ -12,11 +12,27 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/johnmcneilstudio/generator-broccoli-project.git"
+    "url": "git@github.com:johnmcneilstudio/generator-broccoli-project.git"
   },
-  "author": "",
+  "author": {
+    "name": "Matthieu Collé",
+    "url": "https://github.com/raiseandfall"
+  },
   "license": "ISC",
-  "homepage": "https://bitbucket.org/johnmcneilstudio/generator-broccoli-project#readme",
+  "homepage": "https://github.com/johnmcneilstudio/generator-broccoli-project",
+  "bugs": {
+    "url": "https://github.com/johnmcneilstudio/generator-broccoli-project/issues"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "broccoli",
+    "generator",
+    "project",
+    "starter",
+    "scaffolding",
+    "heroku",
+    "markdown"
+  ],
   "dependencies": {
     "chalk": "^1.1.0",
     "is-url-superb": "^2.0.0",

@@ -1,6 +1,6 @@
-# generator-broccoli-project v1.2.3
+# generator-broccoli-project v1.2.7
 
-> A [Yeoman](http://yeoman.io/) generator for Broccoli projects (following "traditional" JMS configuration)
+> A [Yeoman](http://yeoman.io/) generator for Broccoli projects (includes Git & Heroku)
 
 ![Screenshot broccoli project](https://raw.githubusercontent.com/johnmcneilstudio/generator-broccoli-project/master/screenshot.png)
 
@@ -55,7 +55,7 @@ $ npm install -g yo
 $ npm install -g generator-broccoli-project
 ```
 
-### 3. [Create bitbucket repo](https://bitbucket.org/repo/create)
+### 3. Create Git repo
 
 ### 4. [Create Heroku app](https://dashboard.heroku.com/new) if needed (Heroku config setup is optional)
 
