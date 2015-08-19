@@ -1,8 +1,8 @@
-# generator-broccoli-project
+# generator-broccoli-project v1.2.3
 
 > A [Yeoman](http://yeoman.io/) generator for Broccoli projects (following "traditional" JMS configuration)
 
-![Screenshot broccoli project](screenshot.png)
+![Screenshot broccoli project](https://raw.githubusercontent.com/johnmcneilstudio/generator-broccoli-project/master/screenshot.png)
 
 ## [CHANGELOG](./CHANGELOG.md)
 

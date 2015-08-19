@@ -1,5 +1,8 @@
 # CHANGELOG  
 
+## 1.2.3
+- Updated screenshot path in doc
+
 ## 1.2.2
 - Added cmd to open heroku link once pushed
 
