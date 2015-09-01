@@ -1,5 +1,8 @@
 # CHANGELOG  
 
+## 1.2.9
+- Typo in push to heroku command in Changelog
+
 ## 1.2.8
 - Fixed issue: ```src/fonts``` folder wasn't created
 

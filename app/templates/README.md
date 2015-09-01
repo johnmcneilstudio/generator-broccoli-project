@@ -29,7 +29,7 @@ Build the app
 $ npm run build
 ```
 
-Push to staging  
+Push to heroku
 ```shell
-$ npm run staging
+$ npm run heroku
 ```
