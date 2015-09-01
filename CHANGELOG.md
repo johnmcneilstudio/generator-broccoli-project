@@ -1,5 +1,8 @@
 # CHANGELOG  
 
+## 1.2.8
+- Fixed issue: ```src/fonts``` folder wasn't created
+
 ## 1.2.7
 - Updated screenshot path in doc
 

@@ -1,4 +1,4 @@
-# generator-broccoli-project v1.2.7
+# generator-broccoli-project v1.2.8
 
 > A [Yeoman](http://yeoman.io/) generator for Broccoli projects (includes Git & Heroku)
 
