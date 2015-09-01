@@ -160,6 +160,7 @@ module.exports = generators.Base.extend({
       ));
 
       mkdirp('src');
+      mkdirp('src/fonts');
 
       this.directory('_sass', 'src/sass');
       this.directory('_img', 'src/img');
